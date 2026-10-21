@@ -1,0 +1,6 @@
+run = "npm run dev"
+modules = ["nodejs-20", "postgresql-16"]
+
+[deployment]
+build = ["sh", "-c", "npm ci && npm run build"]
+run = ["sh", "-c", "npm run migrate && npm start"]
